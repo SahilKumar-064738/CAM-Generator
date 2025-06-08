@@ -1,0 +1,63 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  background-color: #f8f9fa;
+  transition: 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+}
+
+.dark-mode th {
+  background-color: #2a2a2a;
+}
+
+td.score-1 { background-color: #fff3cd; }   /* yellow */
+td.score-2 { background-color: #c3e6cb; }   /* green */
+td.score-3 { background-color: #b8daff; }   /* blue */
+td.score-0 { color: #999; }
+
+button {
+  padding: 10px 16px;
+  margin: 5px 2px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.dark-mode button {
+  background-color: #444;
+}
