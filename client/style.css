@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --bg-light: #f3f6fd;
+  --bg-dark: #1c1c1c;
+  --text-light: #1f2937;
+  --text-dark: #e5e7eb;
+  --primary: #3b82f6;
+  --primary-dark: #1e3a8a;
+  --border: #d1d5db;
+  --card-bg: #ffffff;
+  --card-bg-dark: #2a2a2a;
+  --input-bg: #ffffff;
+  --input-bg-dark: #2f2f2f;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e0ecfc, #f7f8fc);
+  color: var(--text-light);
+  padding: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* ===== Input & Form ===== */
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  background-color: var(--input-bg);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background-color: var(--input-bg-dark);
+  color: white;
+  border: 1px solid #444;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* ===== Cards ===== */
+.input-group {
+  background: var(--card-bg);
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.dark-mode .input-group {
+  background: var(--card-bg-dark);
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 12px 20px;
+  margin: 6px 4px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary), #2563eb);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2563eb, var(--primary-dark));
+  transform: translateY(-2px);
+}
+
+.dark-mode button {
+  background: #444;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 12px 14px;
+  text-align: center;
+  font-size: 15px;
+}
+
+th {
+  background: linear-gradient(135deg, var(--primary), #2563eb);
+  color: white;
+  font-weight: 600;
+}
+
+.dark-mode th {
+  background: var(--primary-dark);
+}
+
+/* Score cell colors */
+td.score-1 {
+  background-color: #fffacc; /* soft yellow */
+}
+
+td.score-2 {
+  background-color: #d1fae5; /* soft green */
+}
+
+td.score-3 {
+  background-color: #dbeafe; /* soft blue */
+}
+
+td.score-0 {
+  color: #999;
+}
+
+/* ===== Responsive Table ===== */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+  }
+
+  .dark-mode td::before {
+    color: #ccc;
+  }
+}
+
+/* ===== Headings ===== */
+h3 {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.dark-mode h3 {
+  color: #93c5fd;
+}
